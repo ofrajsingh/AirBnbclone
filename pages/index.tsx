@@ -5,6 +5,8 @@ import exploreData from "./Data/exploreData.json";
 import SmallCard from '../components/SmallCard';
 import cardsData from './Data/cardsData.json';
 import MediumCard from '../components/MediumCard';
+import LargeCard from '../components/LargeCard';
+import Footer from '../components/Footer';
 
 const Home= () => {
   return (
@@ -30,13 +32,22 @@ const Home= () => {
 
         <section>
           <h2 className='text-4xl font-semibold py-8'>Live Anywhere</h2>
-          {cardsData?.map(item=>(
-            <MediumCard key={item.img} img={item.img} title={item.title}/>
-          ))}
+          <div className='flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3'>
+            {cardsData?.map(item=>(
+              <MediumCard key={item.img} img={item.img} title={item.title}/>
+            ))}
+          </div>
         </section>
 
-
+        <LargeCard 
+          img= 'https://links.papareact.com/4cj'
+          title= 'The Greatest Outdoors'
+          description= 'Wishlists curated by Airbnb'
+          buttonText= 'Get Inspired'
+        />
       </main>
+
+      <Footer />
 
     </div>
   )
