@@ -33,7 +33,9 @@ function Search() {
                 </div>
 
                 <div className='flex flex-col'>
-                  {searchResults.map(item =>(
+                  {searchResults.map(item =>{
+                    item.location=`Private room in center of ${location}`;
+                    return (
                     <InfoCard 
                       img={item.img}
                       location= {item.location}
@@ -43,7 +45,7 @@ function Search() {
                       price= {item.price}
                       total= {item.total}
                     />
-                  ))}
+                  )})}
                 </div>
 
             </section>
