@@ -16,7 +16,7 @@ const Home= () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <Header placeholder={undefined} />
       <Banner />
 
       <main className='max-w-7xl mx-auto px-8 sm:px-16'>
